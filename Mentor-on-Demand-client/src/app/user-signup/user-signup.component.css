@@ -1,0 +1,13 @@
+section {
+  width: 80%;
+  height: 90%;
+  margin-right: 50px;
+}
+body {
+  height:900px;
+  background: #76b852; 
+  
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;      
+}

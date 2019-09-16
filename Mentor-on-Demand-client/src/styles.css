@@ -1,0 +1,55 @@
+.top-link {
+    display: inline-block;
+    width: auto;
+    height: auto;
+    margin-right: 50px;
+    color: #ffffff;
+    font-size: 20px;
+    float: right;
+}
+#link1 {
+    color: white;
+    display: inline-block;
+    margin-top: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+}
+
+.content {
+    text-align: center;
+    margin-top: 100px;
+}
+.signup-table {
+    margin-top: -100px;
+    
+}
+table {
+    margin-left: 30%;
+    width: auto;
+    margin-top: 10px;
+    margin-bottom: 80px;
+    margin-right: 150px;
+    height: auto;
+    position: fixed;
+    font-size: 20px;
+}
+body {
+    height:900px;
+    background-color:#A3E4D7;
+  }
+
+th {
+    color: #000000;
+    padding-top: 20px;
+    padding-right: 80px;
+}
+td {
+    padding-top: 20px;
+    padding-right: 100px; 
+}
+.nav navbar-nav, a {
+    padding-right: 10px;
+
+}
+.navbar navbar-expand-lg navbar-light bg-light {
+    background-color: #58D68D ;
+}

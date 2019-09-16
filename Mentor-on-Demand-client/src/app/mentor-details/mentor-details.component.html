@@ -1,0 +1,24 @@
+<app-header></app-header>
+<body  style="background-color:#A3E4D7">
+    
+
+<article>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+          <ul class="nav navbar-nav">
+              <li class="active"><a routerLink="./mentor-details">Home  </a></li>
+              <li><a  routerLink="/mentor-proposals">View Requests </a></li>
+              <li> <a routerLink="/completed-trainings">Completed-Trainings</a></li>
+              <li> <a routerLink="/onprogress-trainings">Onprogress-Trainings</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+              
+              <li><a routerLink="/index"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+          </ul>
+      </div>
+  </nav>
+  <h4>Welcome {{ mentor?.username }}</h4>
+</article>
+</body>
+<app-footer></app-footer> 
+<router-outlet></router-outlet>  

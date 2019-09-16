@@ -1,0 +1,90 @@
+<app-header></app-header>
+
+<article>
+    <section class="container">
+        <div class="row m-5">
+            
+            <form class="pt-7" >
+                <form (ngSubmit)="onSubmit()">
+                        <h4>Mentor Sign Up</h4>
+                    <div class="input-group mt-3 mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Username</span>
+                        </div>
+                        <input [(ngModel)]="username" name="username" type="text" class="form-control" />
+                    </div>
+
+                    <div class="input-group mt-3 mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Linkedin-url</span>
+                        </div>
+                        <input [(ngModel)]="linkedin_url" name="linkedin_url" type="text" class="form-control" />
+                    </div>
+                    <div class="input-group mt-3 mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Email</span>
+                        </div>
+                        <input [(ngModel)]="email" name="email" type="text" class="form-control" />
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Password</span>
+                        </div>
+                        <input [(ngModel)]="password" name="password" type="password" class="form-control" />
+                    </div>
+
+                    <div class="input-group">
+                        <input [(ngModel)]="rPassword" name="rPassword" type="password" class="form-control"
+                            placeholder="Re-enter Password" />
+                    </div>
+                    <small *ngIf="password!==rPassword" class="text-danger">Passwords do not match</small>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Years Of Experience</span>
+                        </div>
+                        <input [(ngModel)]="year_of_experience" name="year_of_experience" type="text" class="form-control" />
+                        
+                    </div>
+                    
+
+                    <div class="input-group mt-3 mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Registration Code</span>
+                        </div>
+                        <input [(ngModel)]="reg_code" name="reg_code" type="text" class="form-control" />
+                    </div>
+
+                    
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Registration Date</span>
+                        </div>
+                        <input [(ngModel)]="reg_datetime" name="reg_datetime" type="date" class="form-control" />
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Active Status</span>
+                        </div>
+                        <input [(ngModel)]="active" name="active" type="radio" value="yes" class="form-control" />Yes
+                        <input [(ngModel)]="active" name="active" type="radio" value="no" class="form-control" />NO
+                        
+                    </div>
+
+
+                    <div class="d-flex no-gutters">
+                        <div class="col">
+                            <button type="submit" class="btn btn-success">Submit</button>
+                            <!-- <button type="reset" class="btn btn-danger ml-2">Reset</button> -->
+                        </div>
+                        <div>
+                            <button routerLink="/mentor-login" type="button" class="btn btn-secondary">Back to
+                                Sign-in</button>
+                        </div>
+                    </div>
+                </form>
+            </form>
+
+        </div>
+    </section>
+</article>
+<app-footer></app-footer>

@@ -1,0 +1,32 @@
+<app-header></app-header>
+<body style="background-color:#A3E4D7">
+    
+ <article>
+  <div class="content">
+      <h3>FIND HIGHLY QUALIFIED MENTORS HERE!</h3>
+      <form name="loginForm" method="post" action="">
+          <table>
+              <tr>
+                  <td colspan=2>
+                      <h3> Please provide the conditions for the mentor you need</h3><br>
+                  </td>
+              </tr>
+
+              <tr>
+                  <td><label for="technology"><b>Technology</b></label></td><br>
+                  <td><input type="text" placeholder="Enter technology" name="technology" id="technology" required></td>
+              </tr>
+              <tr>
+                  <td><button type="button" class="btn btn-warning">Reset</button></td>
+                  <td><button type="button" class="btn btn-danger">Search</button></td>
+              </tr>
+
+          </table>
+
+      </form>
+  </div>
+
+</article>
+</body>
+<app-footer></app-footer>
+<router-outlet></router-outlet>

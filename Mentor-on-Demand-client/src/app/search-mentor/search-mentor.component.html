@@ -1,0 +1,60 @@
+<app-header></app-header>
+<nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: #ABEBC6  ">
+    <div class="container-fluid">
+        <ul class="nav navbar-nav">
+            <li class="active"><a routerLink="/user-details" routerLinkActive="active">Home </a></li>
+            <li><a routerLink="/search-mentor" routerLinkActive="active">Search-Mentor</a></li>
+            <li><a routerLink="/view-response" routerLinkActive="active">view-Responses</a></li>
+            <li><a routerLink="/completed-trainings" routerLinkActive="active">Completed Trainings</a></li>
+            <li> <a routerLink="/onprogress-trainings" routerLinkActive="active">On progress Trainings</a></li> 
+            <li> <div class="dropdown">
+                <a routerLink="#"  class="dropdown-toggle" data-toggle="dropdown">Payment</a>
+                <div class="dropdown-menu">
+                    <a routerLink="#" class="dropdown-item">Payment Made</a>
+                    <a routerLink="#" class="dropdown-item">Payment Completed</a>
+                </div>
+            </div></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a routerLink="/index" routerLinkActive="active"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+        </ul>
+    </div>
+  </nav>
+<div style="width: 300px;">
+  <h3>Enter the skill</h3>
+
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="skill_name">Skill Name</label>
+      <input type="text" class="form-control" id="skill_name" name="skill_name" required [(ngModel)]="skill_name">
+    </div>
+
+    <div class="btn-group">
+      <button type="submit" class="btn btn-success">Submit</button>
+    </div>
+  </form>
+</div>
+<ul>
+<table *ngIf="mentors">
+      <tr>
+        <th>Mentor id</th>
+          <th>Mentor Name</th>
+          <th>Skill name</th>
+          <th>Rating</th>
+          <th>Years of Experience</th>
+          <th>Facilities Offered</th>                                                                                                                                                                                                        
+      </tr>
+      <tr *ngFor="let mentor of mentors ">
+         <td>{{mentor.mentor_id}}</td> 
+          <td>{{mentor.username}}</td>
+          <td>{{mentor.skill_name}}</td>
+          <td>{{mentor.self_rating}}</td>
+          <td>{{mentor.years_of_exp}}</td>
+          <td>{{mentor.facilities_offered}}</td>
+          <td >
+            <button type="button" class="btn btn-success" (click)="propose(mentor)" >Propose</button>
+          </td>
+       </tr>
+  </table>
+</ul>
+<app-footer></app-footer>

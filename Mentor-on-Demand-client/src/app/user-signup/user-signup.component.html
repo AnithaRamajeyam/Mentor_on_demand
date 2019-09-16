@@ -1,0 +1,91 @@
+<app-header></app-header>
+<body style="background-color:#A3E4D7">
+<article>
+    <section class="container">
+        <div class="row m-5">
+            
+            <form class="pt-7" >
+                <form (ngSubmit)="onSubmit()">
+                        <h4>User Sign Up</h4>
+                    <div class="input-group mt-3 mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">First Name</span>
+                        </div>
+                        <input [(ngModel)]="first_name" name="first_name" type="text" class="form-control" />
+                    </div>
+
+                    <div class="input-group mt-3 mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Last Name</span>
+                        </div>
+                        <input [(ngModel)]="last_name" name="last_name" type="text" class="form-control" />
+                    </div>
+                    <div class="input-group mt-3 mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Email</span>
+                        </div>
+                        <input [(ngModel)]="email" name="email" type="text" class="form-control" />
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Password</span>
+                        </div>
+                        <input [(ngModel)]="password" name="password" type="password" class="form-control" />
+                    </div>
+
+                    <div class="input-group">
+                        <input [(ngModel)]="rPassword" name="rPassword" type="password" class="form-control"
+                            placeholder="Re-enter Password" />
+                    </div>
+                    <small *ngIf="password!==rPassword" class="text-danger">Passwords do not match</small>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Mobile Num</span>
+                        </div>
+                        <input [(ngModel)]="contact_no" name="contact_no" type="text" class="form-control" />
+                        
+                    </div>
+                    
+
+                    <div class="input-group mt-3 mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Registration Code</span>
+                        </div>
+                        <input [(ngModel)]="reg_code" name="reg_code" type="text" class="form-control" />
+                    </div>
+
+                    
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Registration Date</span>
+                        </div>
+                        <input [(ngModel)]="reg_date" name="reg_date" type="date" class="form-control" />
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Active Status</span>
+                        </div>
+                        <input [(ngModel)]="active" name="active" type="radio" value="yes" class="form-control" />Yes
+                        <input [(ngModel)]="active" name="active" type="radio" value="no" class="form-control" />NO
+                        
+                    </div>
+
+
+                    <div class="d-flex no-gutters">
+                        <div class="col">
+                            <button type="submit" class="btn btn-success">Submit</button>
+                            <!-- <button type="reset" class="btn btn-danger ml-2">Reset</button> -->
+                        </div>
+                        <div>
+                            <button routerLink="/user-login" type="button" class="btn btn-secondary">Back to
+                                Sign-in</button>
+                        </div>
+                    </div>
+                </form>
+            </form>
+
+        </div>
+    </section>
+</article>
+</body>
+<app-footer></app-footer>

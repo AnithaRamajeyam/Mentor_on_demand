@@ -1,0 +1,22 @@
+<app-header></app-header>
+<body >
+    
+
+<article>
+    <div class="login-page">
+        <div class="form">
+            <form class="login-form" (ngSubmit)="onSubmit()">
+                    <input type="email" placeholder="Enter Email Id" name="email" id="email"  [(ngModel)]="email" required>
+                <input type="password" placeholder="Enter Password" name="password" id="Password" required [(ngModel)]="password" >
+                <div class="btn-group">
+                    <button type="submit" class="btn btn-success">Sign in</button>
+                </div>
+                <small *ngIf="invalidLogin" class="text-danger ml-2"> Invalid Username and password</small>
+            
+            </form>
+        </div>
+    </div>
+
+</article>
+</body>
+<app-footer></app-footer>
